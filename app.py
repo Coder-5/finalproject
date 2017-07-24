@@ -10,14 +10,16 @@ def homepage():
 	return render_template('home.html')
 
 # TODO: route to /list
-@app.route('/list')
-def list():
-	return render_template('list.html')
+
 
 # TODO: route to /feed
 @app.route('/feed')
 def feed():
 	return render_template('/feed.html')
+@app.route('/contactus')
+
+def contactus():
+	return render_template('/contactus')
 
 
 # TODO: route to /register
@@ -25,10 +27,49 @@ def feed():
 @app.route('/register')
 def register():
 	return render_template('register.html')
+
+
 # TODO: route to /error
-@app.route('/error')
-def error():
-	return render_template("register.html")
+# @app.route('/error')
+# def error():
+# 	return render_template("register.html")
+@app.route ('/showall')
+def showall():
+	users = db ["users"]
+	allusers = list(users.all())
+	return render_template ("showall1.html", users= allusers)
+
+@app.route('/users' ,methods=["POST"])
+def users():
+	# if username is in the db
+		# print an error saying username is already taken
+	# otherwise
+		# register the user
+		# sucessful login
+
+
+
+	
+	form = request.form
+	firstname= form["first name"]
+	lastname= form["last name"]
+	email = form["email"]
+	username= form["username"]
+	link = form["link"]
+	contactsTable = db["users"]
+	hometown = form["hometown"]
+	entry = {"firstname":firstname ,"lastname":lastname ,"username":username, "email":email , "link":link, "hometown":hometown }
+	nameTocheck = username
+	result = list(contactsTable.find(username=nameTocheck))
+	print len(result)
+	if len(result) == 0:
+		taken = 0
+		contactsTable.insert(entry)	
+		return redirect("/showall")
+	else :
+		taken = 1
+		return render_template("register.html", taken = taken)
+		print list(contactsTable.all())	
 
 if __name__ == "__main__":
     app.run(port=3000)

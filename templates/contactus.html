@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<h1>contact us</h1>
+<form action="/feedback" method="post">
+		username:
+		<br>
+		<input type="text" name="name">
+		<br>
+		email:
+		<br>
+		<input type="email" name="email">
+		<br>
+		your message:
+		<br>
+		<input type="text" name="message" >
+		<br>
+		<input type="submit" value="Submit">
+<!-- TODO: implement list page -->
+
+{% endblock %}

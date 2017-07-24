@@ -22,7 +22,7 @@ li a {
 }
 
 li a:hover {
-  background-color: #111;
+  background-color:   #111;
 }
 .WeCode{
 
@@ -63,7 +63,7 @@ input[type=text], input[type=password] {
 /* Extra styles for the cancel button */
 .cancelbtn {
   padding: 14px 20px;
-  background-color: #f44336;
+  background-color: #333333;
 }
 
 /* Float cancel and signup buttons and add an equal width */

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block head %}
+	<title>We Code Portal</title>
+{% endblock %}
+
+{% block body %}	
+	<table>
+		<tr>
+			<td>name</td>
+			<!-- <td>lastname</td>
+			<td>username</td> -->
+			<td>email</td>
+			<td>message</td>
+			<!-- <td>hometown</td>
+			<td>link</td> -->
+		</tr>
+
+			{% for person in contact %}
+		<tr>
+			<td>{{person.name}} </td>
+			<!-- <td> {{person.lastname}} </td>
+			<td>{{person.username}} </td> -->
+			<td>{{person.email}}</td>
+			<td>{{person.message}}</td>
+			<!-- <td>{{person.hometown}}</td>
+			<td>{{person.link}}</td> -->
+
+		</tr>
+			{% endfor %}
+
+
+
+	</table>
+{% endblock %}

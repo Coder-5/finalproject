@@ -65,3 +65,33 @@ li a:hover {
 .background {
   background-color: #B7DEEE
 }
+#pm{
+  position:absolute;
+  margin-top:270px; 
+  margin-left:1000px;
+  width:300px; 
+  height:192px;
+}
+#pwi{
+  position:absolute; 
+  margin-top:50px;
+  margin-left:1060px; 
+  width:300px; 
+  height:150px
+}
+#pg 
+{
+  position:absolute; 
+  margin-top:70px; 
+  margin-left:320px; 
+  width:300px; 
+  height:190px;
+}
+#cfp
+{
+  position:absolute; 
+  margin-top:270px; 
+  margin-left:320px; 
+  width:650px; 
+  height:100px;
+}

@@ -2,8 +2,29 @@
 
 {% block body %}
 
-<h1>Feed Page</h1>
+<center><form action='/feed' method="POST" class="feedx" >
 
-<!-- TODO: implement feed page -->
+		<textarea name="username"class="feed"rows="2" placeholder="your username"></textarea>
+		<br>
+		<textarea name="post" class="feed"rows="4" placeholder="your post"></textarea>
+		<br>
+		<input type="submit" value="Post" class="">
+</center>
+	</form>
+	<br>
+	<br>
+<center class="post2">
 
-{% endblock %}
+			{% for person in post %}
+		<tr>
+			<td class="post">{{person.username}}</td>
+			<br>	
+			<td class="post">{{person.post}}</td>
+			<br>
+			<td class="post">{{person.time}}</td>
+			<br>
+		</tr>
+				{% endfor %}
+
+	{% endblock %}
+</center>

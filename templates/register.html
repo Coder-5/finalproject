@@ -19,35 +19,38 @@
 	</form> -->
 
 	<img class="homepic" src="../static/images/cfp.png">
-<div class="register">
-	<center><form action="/users" method="POST">
-		<h1>signup</h1>
-			<h2>First name:</h2>
-			
-			<input class="form" type="text" name="first name" placeholder="First name " required >
-			<br>
-			<h2>last name:</h2>
-			
-			<input class="form"type="text" name="last name" placeholder="lastname" required>
-			<br>
-			<h2>username:</h2>
-			
-			<input class="form" type ="text" name="username" placeholder="username"required>
-			<br>
-			<h2>email:</h2>
-			
-			<input class="form" type ="email" name="email" placeholder="email"required>
-			<br>
-			<h2>hometown:</h2>
-			<input class="form" type ="text" name="hometown" placeholder="hometown"required>
-			<br>
-			<h2>you're website link:</h2>
-			
-			<input class="form" type ="text" name="link" placeholder="website link"required>
 
-			<input type="submit" value="Submit">
-	</form> </center>
-</div>
+
+	<form class="forms" action="/users" method="POST">
+
+		<center><h1>signup</h1></center>
+		
+			
+			<input  name="first name" placeholder="First name " required class="best">
+			<br>
+			<br>
+			
+			<input  name="last name" placeholder="lastname" required class="best">
+			<br>
+			<br>
+			
+			<input  type ="text" name="username" placeholder="username"required class="best">
+			<br>
+			<br>
+			
+			<input  type ="email" name="email" placeholder="email"required class="best">
+			<br>
+			<br>
+			<input  type ="text" name="hometown" placeholder="hometown"required class="best" >
+			<br>
+			<br>
+			
+			<input  type ="text" name="link" placeholder="website link"required class="best">
+			<br>
+			<br>
+			<input type="submit" value="register" class="registerbt">
+	</form> 
+
 {% if taken == 1 %}
 	<h1>this username is already taken</h1>
 {% endif %}

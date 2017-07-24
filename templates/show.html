@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block head %}
+	<title>We Code Posts</title>
+{% endblock %}
+
+{% block body %}	
+	<table>
+		<tr>
+			<td>username</td>
+			
+			
+			<td>post</td>
+			
+		</tr>
+
+			{% for person in contact %}
+		<tr>
+			<td>{{person.username}} </td>
+			
+			<td>{{person.post}}</td>
+			
+
+		</tr>
+			{% endfor %}
+
+
+
+	</table>
+{% endblock %}

@@ -64,7 +64,7 @@ li a:hover {
 
 }
 .background {
-  background-color: #B7DEEE
+  background-color: #d3d7d8
 }
 #pm{
   position:absolute;
@@ -131,7 +131,7 @@ li a:hover {
 }
 #wci
 {
-  color= #C0C0C0; 
+  color:black; 
   margin-top:550px;
 }
 .cv
@@ -142,9 +142,41 @@ margin-top:0;
 margin-left:320 
 }
 
+.best{
+  margin-left: 30%;
+  width: 39%;
+  border-radius:12px;
+  border-color: aqua;
+  height: 30px;
+  text-align: center;
+}
+.feedx{
+  margin-top: 1%;
+  background-color: lightgray;
+  margin-left: 22%;
+  margin-right: 22%;
+}
 
-
-
-
+.registerbt{
+  margin-left: 37%;
+  height: 32px;
+  width: 27%;
+  border-color: aqua;
+  border-radius: 15px;
+}
+.post2{
+  background-color: lightgray;
+  margin-right: 30%;
+  margin-left:30%;
+}
+.new{
+  margin-top:1%;
+  border-radius:5px;3.
+  border-color:aqua;
+}
+.usershow{
+  border-radius: 2px;
+  border:solid;
+}
 
 

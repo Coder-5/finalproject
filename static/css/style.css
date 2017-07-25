@@ -56,6 +56,7 @@ li a:hover {
 .homepic{
   margin-left: 11%;
 }
+
 .form{
   margin-right: 20%;
   width: 85%;
@@ -63,9 +64,49 @@ li a:hover {
   border-radius: 40px;
 
 }
-.background {
-  background-color: #B7DEEE
+
+.container {
+  position: relative;
 }
+
+.container:before{
+  content:"";
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-image: url("../images/back2.png");
+  opacity: 0.5;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+}
+
+.background {
+   /* The image used */
+    background-image: url("../images/back.png");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+
+
+}
+
 #pm{
   position:absolute;
   margin-top:270px; 
@@ -141,9 +182,6 @@ height:315;
 margin-top:0;
 margin-left:320 
 }
-
-
-
 
 
 

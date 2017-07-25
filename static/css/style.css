@@ -5,6 +5,7 @@ ul {
   padding: 0;
   overflow: hidden;
   background-color: #333333;
+/*used in base.html for header*/
 }
 
 li {
@@ -91,7 +92,59 @@ li a:hover {
 {
   position:absolute; 
   margin-top:270px; 
-  margin-left:320px; 
+  margin-left:320px;
   width:650px; 
   height:100px;
 }
+#wb
+{
+  position:absolute; 
+  margin-top:70px; 
+  margin-left:640px; 
+  width:300px; 
+  height:190px;
+}
+#sp 
+{
+  position:absolute; 
+  margin-top:70px; 
+  margin-left:970px; 
+  width:300px; 
+  height:190px;
+}
+#y1w
+{
+  position:absolute; 
+  margin-top:70px; 
+  margin-left:10px;
+  width:300px; 
+  height:192px;
+}
+
+#fp
+{
+  position:absolute; 
+  margin-top:270px; 
+  margin-left:10px; 
+  width:300px; 
+  height:192px
+}
+#wci
+{
+  color= #C0C0C0; 
+  margin-top:550px;
+}
+.cv
+{
+width:560; 
+height:315;
+margin-top:0;
+margin-left:320 
+}
+
+
+
+
+
+
+

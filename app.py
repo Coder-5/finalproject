@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
+import time
 import dataset
 
 app = Flask(__name__)
@@ -13,11 +14,34 @@ def homepage():
 
 
 # TODO: route to /feed
-@app.route('/feed')
+@app.route('/feed', methods =["POST","GET"])
 def feed():
-	return render_template('/feed.html')
-@app.route('/contactus')
+		feedTable= db["feed"]
+	
+		if request.method == 'GET':
+			allposts= list(feedTable.all())
+			return render_template("feed.html", post=allposts)
 
+		form = request.form	
+		username =form["username"]
+		post = form["post"]
+		time_string = time.strftime('%l:%M on %b %d, %Y')
+		nameTocheck = username
+		result2 = list(feedTable.find(username=nameTocheck))
+		if len(result2) ==1:
+			entry={"username":username, "post":post, "time":time_string}
+			feedTable.insert(entry)
+			allposts= list(feedTable.all())	
+			return render_template("feed.html", post=allposts)
+		elif len(result2)==0:
+			return	render_template("register.html")
+
+
+
+	# elif request.method == 'GET':
+	# 	return render_template("feed.html")
+
+@app.route('/contactus')
 def contactus():
 	return render_template('/contactus')
 
@@ -46,9 +70,6 @@ def users():
 	# otherwise
 		# register the user
 		# sucessful login
-
-
-
 	
 	form = request.form
 	firstname= form["first name"]
@@ -65,11 +86,12 @@ def users():
 	if len(result) == 0:
 		taken = 0
 		contactsTable.insert(entry)	
-		return redirect("/showall")
+		return redirect("/home")
 	else :
 		taken = 1
 		return render_template("register.html", taken = taken)
 		print list(contactsTable.all())	
+
 
 if __name__ == "__main__":
     app.run(port=3000)

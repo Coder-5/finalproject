@@ -160,10 +160,12 @@ li a:hover {
 {
   color: black; 
 }
-.cv
+.video
 {
-margin-top:29%;
-margin-left:25%; 
+  margin-top: 350px;
+  margin-left: 25%;
+  width: 650px;
+  height: 300px;
 }
 
 .best{
@@ -179,15 +181,19 @@ margin-left:25%;
   background-color: lightgray;
   margin-left: 22%;
   margin-right: 22%;
+  border-radius: 20px;
 
 }
 
 
 
 .cv2{
-  width: 68%;
-  height: 307px;
+  margin-top: 40%;
+  margin-left: 36.5%;
+  width: 74%;
+  height: 85%;
 }
+
 
 .registerbt{
   margin-left: 37%;
@@ -195,4 +201,20 @@ margin-left:25%;
   width: 27%;
   border-color: aqua;
   border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.photos{
+  height: 290px;
+  border-radius: 15px;
+  border-color:aqua;
+  width: 210px;
+  margin-bottom: 60px;
+}
+
+.hometxt{
+  margin-left: 210px;
+  margin-top: -275px;
+  font-family: inherit;
+  font-size: 23px;
 }

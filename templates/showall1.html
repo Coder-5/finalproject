@@ -7,22 +7,22 @@
 {% block body %}	
 	<table>
 		<tr>
-			<td>firstname</td>
-			<td>lastname</td>
-			<td>username</td>
-			<td>email</td>
-			<td>hometown</td>
-			<td>link</td>
+			<td><h2>firstname</h2></td>
+			<td><h2>lastname</h2></td>
+			<td><h2>username</h2></td>
+			<td><h2>email</h2></td>
+			<td><h2>hometown</h2></td>
+			<td><h2>link</h2></td>
 		</tr>
 
 			{% for person in users %}
 		<tr>
-			<td class="table">{{person.firstname}} </td>
-			<td class="table"> {{person.lastname}} </td>
-			<td classs="table">{{person.username}} </td>
-			<td classs="table">{{person.email}}</td>
-			<td class="table">{{person.hometown}}</td>
-			<td class="table">{{person.link}}</td>
+			<td class="usershow">{{person.firstname}} </td>
+			<td class="usershow"> {{person.lastname}} </td>
+			<td class="usershow">{{person.username}} </td>
+			<td class="usershow">{{person.email}}</td>
+			<td class="usershow">{{person.hometown}}</td>
+			<td class="usershow">{{person.link}}</td>
 
 		</tr>
 			{% endfor %}

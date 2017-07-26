@@ -54,7 +54,7 @@ li a:hover {
 
 
 .homepic{
-  margin-left: 11%;
+ 
 }
 
 .form{
@@ -65,34 +65,19 @@ li a:hover {
 
 }
 
-.container {
-  position: relative;
+#bg-image {
+  position: fixed;
+  top: 0;
+  width:100%;
+  opacity:0.5;
+  z-index: -1;
 }
 
-.container:before{
-  content:"";
-  position: absolute;
-  top:0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  background-image: url("../images/back2.png");
-  opacity: 0.5;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
-}
 
-.content {
-  position: relative;
-  z-index: 2;
-}
 
 .background {
    /* The image used */
-    background-image: url("../images/back.png");
+    background-image: url("../images/back2.png");
 
     /* Full height */
     height: 100%; 
@@ -105,18 +90,19 @@ li a:hover {
     filter: alpha(opacity=50);
 
 
+
 }
 
 #pm{
   position:absolute;
-  margin-top:270px; 
+  margin-top:240px; 
   margin-left:1000px;
   width:300px; 
   height:192px;
 }
 #pwi{
   position:absolute; 
-  margin-top:50px;
+  margin-top:20px;
   margin-left:1060px; 
   width:300px; 
   height:150px
@@ -124,7 +110,7 @@ li a:hover {
 #pg 
 {
   position:absolute; 
-  margin-top:70px; 
+  margin-top:40px; 
   margin-left:320px; 
   width:300px; 
   height:190px;
@@ -132,7 +118,7 @@ li a:hover {
 #cfp
 {
   position:absolute; 
-  margin-top:270px; 
+  margin-top:240px; 
   margin-left:320px;
   width:650px; 
   height:100px;
@@ -140,7 +126,7 @@ li a:hover {
 #wb
 {
   position:absolute; 
-  margin-top:70px; 
+  margin-top:40px; 
   margin-left:640px; 
   width:300px; 
   height:190px;
@@ -148,7 +134,7 @@ li a:hover {
 #sp 
 {
   position:absolute; 
-  margin-top:70px; 
+  margin-top:40px; 
   margin-left:970px; 
   width:300px; 
   height:190px;
@@ -156,7 +142,7 @@ li a:hover {
 #y1w
 {
   position:absolute; 
-  margin-top:70px; 
+  margin-top:40px; 
   margin-left:10px;
   width:300px; 
   height:192px;
@@ -165,22 +151,23 @@ li a:hover {
 #fp
 {
   position:absolute; 
-  margin-top:270px; 
+  margin-top:240px; 
   margin-left:10px; 
   width:300px; 
   height:192px
 }
 #wci
 {
-  color= #C0C0C0; 
+  color: #C0C0C0; 
   margin-top:550px;
 }
 .cv
 {
-width:560; 
-height:315;
-margin-top:0;
-margin-left:320 
+position: absolute;
+width:650px; 
+height:315px;
+margin-top:-10px;
+margin-left:320px; 
 }
 
 

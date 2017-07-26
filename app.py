@@ -14,32 +14,6 @@ def homepage():
 
 
 # TODO: route to /feed
-@app.route('/feed', methods =["POST","GET"])
-def feed():
-		feedTable= db["feed"]
-	
-		if request.method == 'GET':
-			allposts= list(feedTable.all())
-			return render_template("feed.html", post=allposts)
-
-		form = request.form	
-		username =form["username"]
-		post = form["post"]
-		time_string = time.strftime('%l:%M on %b %d, %Y')
-		nameTocheck = username
-		result2 = list(feedTable.find(username=nameTocheck))
-		if len(result2) ==1:
-			entry={"username":username, "post":post, "time":time_string}
-			feedTable.insert(entry)
-			allposts= list(feedTable.all())	
-			return render_template("feed.html", post=allposts)
-		elif len(result2)==0:
-			return	render_template("register.html")
-
-
-
-	# elif request.method == 'GET':
-	# 	return render_template("feed.html")
 
 @app.route('/contactus')
 def contactus():
@@ -91,6 +65,38 @@ def users():
 		taken = 1
 		return render_template("register.html", taken = taken)
 		print list(contactsTable.all())	
+
+@app.route('/feed', methods =["POST","GET"])
+def feed():
+		contactsTable = db["users"]
+		feedTable= db["feed"]
+	
+		if request.method == 'GET':
+			allposts= list(feedTable.all())
+			return render_template("feed.html", post=allposts)
+
+		form = request.form	
+		username =form["username"]
+		post = form["post"]
+		time_string = time.strftime('%I:%M %p on %b %d, %Y')
+		nameTocheck = username
+		result2 = list(contactsTable.find(username=nameTocheck))
+		print result2
+		if len(result2) ==1:
+			notregister =1
+			entry={"username":username, "post":post, "time":time_string}
+			feedTable.insert(entry)
+			allposts= list(feedTable.all())	
+			return render_template("feed.html", post=allposts)
+		elif len(result2)==0:
+			notregister=0
+
+			return	render_template("register.html")
+
+
+
+	# elif request.method == 'GET':
+	# 	return render_template("feed.html")
 
 
 if __name__ == "__main__":

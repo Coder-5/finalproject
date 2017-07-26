@@ -1,12 +1,15 @@
 {% extends "base.html" %}
 
 {% block body %}
+	{% if notregister == 0 %}
+	<h1>please register to the website first</h1>
+	{% endif %}
 
 <center><form action='/feed' method="POST" class="feedx" >
 
-		<textarea name="username"class="feed"rows="2" placeholder="your username"></textarea>
+		<textarea name="username"class="news"rows="2" placeholder="your username"></textarea>
 		<br>
-		<textarea name="post" class="feed"rows="4" placeholder="your post"></textarea>
+		<textarea name="post" class="news"rows="4" placeholder="your post"></textarea>
 		<br>
 		<input type="submit" value="Post" class="">
 </center>
@@ -26,5 +29,5 @@
 		</tr>
 				{% endfor %}
 
-	{% endblock %}
 </center>
+	{% endblock %}

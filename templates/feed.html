@@ -7,27 +7,36 @@
 
 <center><form action='/feed' method="POST" class="feedx" >
 
-		<textarea name="username"class="news"rows="2" placeholder="your username"></textarea>
+		<textarea name="username"class="news w3-input w3-border"rows="2" placeholder="your username"></textarea>
 		<br>
-		<textarea name="post" class="news"rows="4" placeholder="your post"></textarea>
+		<textarea name="post" class="news w3-input w3-border"rows="4" placeholder="your post"></textarea>
 		<br>
-		<input type="submit" value="Post" class="">
+		<input type="submit" value="Post" class="w3-button w3-white w3-border w3-border-red w3-round-large">
 </center>
 	</form>
 	<br>
 	<br>
 <center class="post2">
+	{% for person in post %}
+<br>
+<br>
 
-			{% for person in post %}
-		<tr>
-			<td class="post">{{person.username}}</td>
-			<br>	
-			<td class="post">{{person.post}}</td>
-			<br>
-			<td class="post">{{person.time}}</td>
-			<br>
-		</tr>
-				{% endfor %}
+	<div class="w3-card-4" style="width:50%;">
+    <header class="w3-container w3-green">
+      <h1>{{person.username}}</h1>
+    </header>
+
+    <div class="w3-container">
+      <p>{{person.post}}</p>
+    </div>
+
+    <footer class="w3-container w3-blue">
+      <h5>{{person.time}}</h5>
+    </footer>
+  </div>
+	{% endfor %}
+
+
 
 </center>
 	{% endblock %}

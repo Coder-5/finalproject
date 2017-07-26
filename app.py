@@ -5,6 +5,13 @@ import dataset
 app = Flask(__name__)
 db = dataset.connect("postgres://wyatfdlebnriti:2b530a18fd94064e074dc26661c0c5e9d7c0284f5789a6a9a38d2fca15a62892@ec2-54-83-49-44.compute-1.amazonaws.com:5432/d9skv55jqn2qvb")
 
+def reset_db():
+	users = db['users']
+	users.drop()
+	print list(db.tables)
+
+# reset_db()
+# print crash
 
 @app.route('/home')
 def homepage():
@@ -56,6 +63,7 @@ def users():
 	entry = {"firstname":firstname ,"lastname":lastname ,"username":username, "email":email , "link":link, "hometown":hometown }
 	nameTocheck = username
 	result = list(contactsTable.find(username=nameTocheck))
+	#result3 = list(contactsTable.delete(username=username))
 	print len(result)
 	if len(result) == 0:
 		taken = 0
@@ -68,30 +76,29 @@ def users():
 
 @app.route('/feed', methods =["POST","GET"])
 def feed():
-		contactsTable = db["users"]
-		feedTable= db["feed"]
+	contactsTable = db["users"]
+	feedTable= db["feed"]
 	
-		if request.method == 'GET':
-			allposts= list(feedTable.all())
-			return render_template("feed.html", post=allposts)
+	if request.method == 'GET':
+		allposts= list(feedTable.all())[::-1]
+		return render_template("feed.html", post=allposts)
 
-		form = request.form	
-		username =form["username"]
-		post = form["post"]
-		time_string = time.strftime('%I:%M %p on %b %d, %Y')
-		nameTocheck = username
-		result2 = list(contactsTable.find(username=nameTocheck))
-		print result2
-		if len(result2) ==1:
-			notregister =1
-			entry={"username":username, "post":post, "time":time_string}
-			feedTable.insert(entry)
-			allposts= list(feedTable.all())	
-			return render_template("feed.html", post=allposts)
-		elif len(result2)==0:
-			notregister=0
-
-			return	render_template("register.html")
+	form = request.form	
+	username =form["username"]
+	post = form["post"]
+	time_string = time.strftime('%I:%M %p on %b %d, %Y')
+	nameTocheck = username
+	result2 = list(contactsTable.find(username=nameTocheck))
+	print result2
+	if len(result2) ==1:
+		notregister =1
+		entry={"username":username, "post":post, "time":time_string}
+		feedTable.insert(entry)
+		allposts= list(feedTable.all())[::-1]
+		return render_template("feed.html", post=allposts)
+	else:
+		notregister=0
+		return	render_template("register.html")
 
 
 

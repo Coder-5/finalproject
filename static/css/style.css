@@ -158,18 +158,41 @@ li a:hover {
 }
 #wci
 {
-  color: #C0C0C0; 
-  margin-top:550px;
+  color: black; 
 }
 .cv
 {
-position: absolute;
-width:650px; 
-height:315px;
-margin-top:-10px;
-margin-left:320px; 
+margin-top:29%;
+margin-left:25%; 
+}
+
+.best{
+  margin-left: 30%;
+  width: 39%;
+  border-radius:12px;
+  border-color: aqua;
+  height: 30px;
+  text-align: center;
+}
+.feedx{
+  margin-top: 1%;
+  background-color: lightgray;
+  margin-left: 22%;
+  margin-right: 22%;
+
 }
 
 
 
+.cv2{
+  width: 68%;
+  height: 307px;
+}
 
+.registerbt{
+  margin-left: 37%;
+  height: 32px;
+  width: 27%;
+  border-color: aqua;
+  border-radius: 15px;
+}

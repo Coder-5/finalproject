@@ -132,14 +132,11 @@ li a:hover {
 #wci
 {
   color:black; 
-  margin-top:550px;
 }
 .cv
 {
-width:560; 
-height:315;
-margin-top:0;
-margin-left:320 
+margin-top: 29%;
+margin-left: 25%;
 }
 
 .best{
@@ -179,4 +176,8 @@ margin-left:320
   border:solid;
 }
 
+.cv2{
+  width: 68%;
+  height: 307px;
+}
 

@@ -20,40 +20,41 @@
 
 	<img src="../static/images/cfp.png">
 
+{% if taken == 1 %}
+	<h1>this username is already taken</h1>
+{% endif %}
 
-	<form class="forms" action="/users" method="POST">
+	<form class="forms box" action="/users" method="POST">
 
 		<center><h1>Signup</h1></center>
-		
+
+			<center><h4 id="required"> Required *</h4></center>
 			
-			<input  name="first name" placeholder="First name " required class="best">
-			<br>
-			<br>
-			
-			<input  name="last name" placeholder="lastname" required class="best">
+			<input  name="first name" placeholder="First name * " required class="best">
 			<br>
 			<br>
 			
-			<input  type ="text" name="username" placeholder="username"required class="best">
+			<input  name="last name" placeholder="lastname *" required class="best">
 			<br>
 			<br>
 			
-			<input  type ="email" name="email" placeholder="email"required class="best">
-			<br>
-			<br>
-			<input  type ="text" name="hometown" placeholder="hometown"required class="best" >
+			<input  type ="text" name="username" placeholder="username *"required class="best">
 			<br>
 			<br>
 			
-			<input  type ="text" name="link" placeholder="website link"required class="best">
+			<input  type ="email" name="email" placeholder="email *"required class="best">
+			<br>
+			<br>
+			<input  type ="text" name="hometown" placeholder="hometown *"required class="best" >
+			<br>
+			<br>
+			
+			<input  type ="text" name="link" placeholder="website link" class="best">
 			<br>
 			<br>
 			<input type="submit" value="register" class="registerbt w3-btn w3-white w3-border w3-border-red w3-round-large">
 	</form> 
 
-{% if taken == 1 %}
-	<h1>this username is already taken</h1>
-{% endif %}
 
 	<!-- <form action="/action_page.php" style="border:1px solid #ccc">
   <div class="container">

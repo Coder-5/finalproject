@@ -41,7 +41,9 @@
 		    	<br>
 		    	{{person.hometown}}
 		    	<br>
-		    	{{person.link}}
+		    	{% if person.link != "" %}
+		    	<a class="link" href="https://{{person.link}}">{{person.link}}</a>  
+		    	{% endif %}	
 		    </span>
 		  </li>
 		  

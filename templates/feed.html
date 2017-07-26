@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block body %}
+<center><h1>News Feed</h1></center>
 	{% if notregister == 0 %}
 	<h1>please register to the website first</h1>
 	{% endif %}
@@ -26,7 +27,7 @@
       <h1>{{person.username}}</h1>
     </header>
 
-    <div class="w3-container">
+    <div class="w3-container box2">
       <p>{{person.post}}</p>
     </div>
 

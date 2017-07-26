@@ -32,6 +32,7 @@ li a:hover {
   padding-bottom: 16px;
   width: 300px;
   height: 44px;
+  margin-left: 3%
 
 }
 
@@ -159,6 +160,11 @@ li a:hover {
 #wci
 {
   color: black; 
+  font-weight: bold;
+  background-color: hsla(0, 0%, 76%, 0.52);
+  font-size: 24px;
+  border-radius: 15px;
+  padding-left: 3%
 }
 .video
 {
@@ -183,6 +189,9 @@ li a:hover {
   margin-right: 22%;
   border-radius: 20px;
 
+}
+#required{
+  color:red;
 }
 
 
@@ -216,7 +225,11 @@ li a:hover {
   margin-left: 225px;
   margin-top: -275px;
   font-family: inherit;
-  font-size: 23px;
+  background-color:hsla(0, 0%, 76%, 0.52); 
+  font-size: 24px;
+  font-weight: bold;
+  padding-left: 3%;
+  border-radius: 15px;
 }
 .show{
   background-color: rgba(51, 51, 51, 0);
@@ -225,4 +238,29 @@ li a:hover {
 .nametag{
   margin-left: 71px;
   display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+}
+.link 
+{
+  background-color: rgba(51, 51, 51, 0);
+  color:black;
+  font-size: 24px;
+  font-weight: bold;
+
+}
+.box{
+  background-color: hsla(0, 0%, 76%, 0.52);
+  width:50%;
+  border-radius:20px;
+  margin-left:25%;
+
+
+}
+.box2{
+  background-color: lightgray;
+  font-size: 20px;
+}
+.hometxt22{
+  font-size: 60px;
 }

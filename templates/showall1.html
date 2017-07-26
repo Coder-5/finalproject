@@ -5,23 +5,23 @@
 {% endblock %}
 
 {% block body %}	
-	<table class="w3-table">
+	<!-- <table class="w3-table-all w3-card-4">
 		<tr>
-			<td><h2>firstname</h2></td>
+			<td><h2>Firstname</h2></td>
 			
-			<td><h2>lastname</h2></td>
+			<td><h2>Lastname</h2></td>
 			
-			<td><h2>username</h2></td>
+			<td><h2>Username</h2></td>
 			
-			<td><h2>email</h2></td>
+			<td><h2>Email</h2></td>
 			
-			<td><h2>hometown</h2></td>
+			<td><h2>Hometown</h2></td>
 			
-			<td><h2>link</h2></td>
+			<td><h2>Link</h2></td>
 		</tr>
-
+ -->
 			{% for person in users %}
-		<tr>
+		<!-- <tr>
 			<td class="usershow">{{person.firstname}} </td>
 			<td class="usershow"> {{person.lastname}} </td>
 			<td class="usershow">{{person.username}} </td>
@@ -29,7 +29,38 @@
 			<td class="usershow">{{person.hometown}}</td>
 			<td class="usershow">{{person.link}}</td>
 
-		</tr>
+		</tr> -->
+		<ul class="w3-ul w3-card-4 show">
+		  <li class="w3-padding-16">
+		    <img src="../static/images/img_avatar2.png" class="w3-left w3-circle w3-margin-right" style="width:50px">
+		    <span class="w3-large">{{person.firstname}} {{person.lastname}}</span><br>
+		    <span class="nametag">
+		    	{{person.username}} 
+		    	<br>
+		    	{{person.email}}
+		    	<br>
+		    	{{person.hometown}}
+		    	<br>
+		    	{{person.link}}
+		    </span>
+		  </li>
+		    <span onclick="this.parentElement.style.display='none'" 
+		    class="w3-button w3-white w3-xlarge w3-right">×</span>
+		  <!-- <li class="w3-padding-16">
+		    <span onclick="this.parentElement.style.display='none'" 
+		    class="w3-button w3-white w3-xlarge w3-right">×</span>
+		    <img src="img_avatar5.png" class="w3-left w3-circle w3-margin-right" style="width:50px">
+		    <span class="w3-large">Jill</span><br>
+		    <span>Support</span>
+		  </li>  
+		  <li class="w3-padding-16">
+		    <span onclick="this.parentElement.style.display='none'" 
+		    class="w3-button w3-white w3-xlarge w3-right">×</span>
+		    <img src="img_avatar6.png" class="w3-left w3-circle w3-margin-right" style="width:50px">
+		    <span class="w3-large">Jane</span><br>
+		    <span>Accountant</span> -->
+		  </li> 
+		</ul>
 			{% endfor %}
 
 

@@ -213,8 +213,16 @@ li a:hover {
 }
 
 .hometxt{
-  margin-left: 210px;
+  margin-left: 225px;
   margin-top: -275px;
   font-family: inherit;
   font-size: 23px;
+}
+.show{
+  background-color: rgba(51, 51, 51, 0);
+
+}
+.nametag{
+  margin-left: 71px;
+  display: inline-block;
 }

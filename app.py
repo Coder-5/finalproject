@@ -86,7 +86,7 @@ def feed():
 	form = request.form	
 	username =form["username"]
 	post = form["post"]
-	time_string = time.strftime('%I:%M %p on %b %d, %Y')
+	time_string = time.strftime('%l:%M %p on %b %d, %Y')
 	nameTocheck = username
 	result2 = list(contactsTable.find(username=nameTocheck))
 	print result2
